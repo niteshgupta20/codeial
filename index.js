@@ -4,6 +4,7 @@ const expressLayouts = require('express-ejs-layouts');
 
 const app = express();
 
+app.use(express.static('./assets'));
 app.use(expressLayouts);
 
 //set up view engine
