@@ -7,6 +7,10 @@ const app = express();
 
 app.use(express.static('./assets'));
 app.use(expressLayouts);
+//extract style and scripts from subpages into the layout
+app.set('layout extractStyles', true);
+app.set('layout extractScripts', true);
+
 
 //set up view engine
 app.set('view engine', 'ejs');
